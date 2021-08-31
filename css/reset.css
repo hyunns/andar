@@ -1,0 +1,42 @@
+* {box-sizing: border-box;}
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,dialog,figure,footer,header,hgroup,menu,nav,section,menu,time,mark,audio,video { margin: 0; padding: 0; border: 0; outline: 0; font: inherit; vertical-align: baseline; background: transparent; }
+
+html,body { width: 100%; height: 100%;}
+body { line-height: 1; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -o-text-size-adjust: 100%; text-size-adjust: 100%; }
+section,article,aside,main,dialog,figure,footer,header,hgroup,nav,section,img { display: block; }
+fieldset, img { border: 0; vertical-align: top; width: 100%;}
+address, em { font-style: normal; }
+ol, ul { list-style: none; }
+input,select { vertical-align: middle; }
+select::-ms-expand { display: none; }
+
+a {
+    font-size: 15px;
+    color: inherit;
+    letter-spacing: -0.05em;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+}
+
+body, input, button, select, textarea, table {
+    font: inherit;
+    /* font-size: 15px; */
+    /* font-weight: 400; */
+    letter-spacing: -0.05em;
+    color: inherit;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+::-webkit-input-placeholder { color: rgba(0,0,0,0.5) !important; }
+:-ms-input-placeholder { color: rgba(0,0,0,0.5) !important; }
+::-moz-placeholder { color: rgba(0,0,0,0.5) !important; }
+::-ms-input-placeholder { color: rgba(0,0,0,0.5) !important; }
+::placeholder { color: rgba(0,0,0,0.5) !important; }

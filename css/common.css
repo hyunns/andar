@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Regular.eot');
+    src: url('../fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-Regular.woff') format('woff'),
+        url('../fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Medium.eot');
+    src: url('../fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-Medium.woff') format('woff'),
+        url('../fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-SemiBold.eot');
+    src: url('../fonts/Gilroy-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-SemiBold.woff') format('woff'),
+        url('../fonts/Gilroy-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Bold.eot');
+    src: url('../fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-Bold.woff') format('woff'),
+        url('../fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+.blind {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+}
+
+body.hidden {height: 100%; overflow-y: hidden; }
+
+/* 버튼 공통스타일 */
+.btn { display: inline-block; margin-top: 42px; letter-spacing: 0.2em; padding-bottom: 16px; position: relative; overflow: hidden; }
+.btn:before { content: ''; display: block; position: absolute; left: 0; bottom:0; width: 0%; height: 1px; background: #000; }
+.btn:after { content: ''; display: block; position: absolute; right: 0; bottom:0; width: 100%; height: 1px; background: #000; }
+.btn:hover::after { width: 0%; transition: 0.6s cubic-bezier(0.36, 0.14, 0, 1);}
+.btn:hover::before { width: 100%; transition: 0.6s 0.5s cubic-bezier(0.36, 0.14, 0, 1);}
+
+/* 탑버튼, 버튼효과 공통스타일 */
+.top_wrap { position: fixed; bottom: 50px; overflow: hidden;}
+.btn_top { position: relative; display: block; width: 70px; height: 70px; border-radius: 50%; border: 1px solid #000; }
+.btn_top::before { content:''; position: absolute; top: 0; width: 100%; height: 100%; background: url(../images/icon/arrow.svg) no-repeat; background-size: 40%; background-position: center; transform: rotate(90deg); transition: all 0.6s cubic-bezier(0.36, 0.14, 0, 1); }
+.btn_top::after { content:''; position: absolute; top: 100%; width: 100%; height: 100%; background: url(../images/icon/arrow.svg) no-repeat; background-size: 40%; background-position: center; transform: rotate(270deg); transition: all 0.6s cubic-bezier(0.36, 0.14, 0, 1); }
+.btn_top.on::before {top: -100%;}
+.btn_top.on::after {top: 0%;}
+
+@keyframes moveArr01 { 0% { top: 0; opacity: 1; } 30% { top: 100%; opacity: 0; } 60% { top: -100%; opacity: 0; } 100% { top: 0; opacity: 1; } }
+@keyframes moveArr02 { 0% { top: 0; opacity: 1; } 30% { top: -100%; opacity: 0; } 60% { top: 100%; opacity: 0; } 100% { top: 0; opacity: 1; } }
+
+/* 타이틀 공통스타일 */
+h2 {cursor: default;}
+
+.left_header .logo .m_logo {display: none;}
+.right_header .m_gnb .m_sns_wrap {display: none;}
